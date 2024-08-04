@@ -52,17 +52,17 @@ class SiteStatisticsPageHandler extends Handler
         $templateMgr->addStyleSheet('siteStatisticsStyles', $url);
 
         // Fetch and cache values
-		$cacheManager = CacheManager::getManager();
-		$cache = $cacheManager->getCache('siteStatistics', 0, array($this, 'getSiteStatisticsCache'));
+        $cacheManager = CacheManager::getManager();
+        $cache = $cacheManager->getCache('siteStatistics', 0, array($this, 'getSiteStatisticsCache'));
 
-		$daysToStale = 1;
+        $daysToStale = 1;
         $metrics = [];
-        
-		if (time() - $cache->getCacheTime() > 60 * 60 * 24 * $daysToStale) {
-			$cache->flush();
-		}
 
-		$metrics = $cache->getContents();
+        if (time() - $cache->getCacheTime() > 60 * 60 * 24 * $daysToStale) {
+            $cache->flush();
+        }
+
+        $metrics = $cache->getContents();
 
         // Assign values
         $this->setupTemplate($request);
@@ -177,20 +177,20 @@ class SiteStatisticsPageHandler extends Handler
     */
     protected function getLocalizedMostReadArray(array $mostReadArray): array
     {
-		$localizedMostReadArray = [];
-		foreach($mostReadArray as $metric){
-			$submission = Repo::submission()->get($metric['submissionId']);
+        $localizedMostReadArray = [];
+        foreach($mostReadArray as $metric){
+            $submission = Repo::submission()->get($metric['submissionId']);
             $context = Services::get('context')->get($submission->getData('contextId'));
-			if(isset($submission) && $submission?->getCurrentPublication()->getData('status') === PKPSubmission::STATUS_PUBLISHED) 
-			{
-				$localizedMostReadArray[] = [
-					'url' => Application::get()->getRequest()->url($context?->getPath(), 'article', 'view', [$submission->getBestId()]),
+            if(isset($submission) && $submission?->getCurrentPublication()->getData('status') === PKPSubmission::STATUS_PUBLISHED) 
+            {
+                $localizedMostReadArray[] = [
+                    'url' => Application::get()->getRequest()->url($context?->getPath(), 'article', 'view', [$submission->getBestId()]),
                     'submission' => $submission?->getCurrentPublication()->getLocalizedFullTitle(null, 'html'),
                     'context' => $context?->getLocalizedName(),
                     'metric' => $metric['metric']
                 ];
-			}
-		}
+            }
+        }
         return $localizedMostReadArray;
     }
  
