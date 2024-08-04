@@ -11,6 +11,8 @@ This plugin creates a public site wide statistics page. The plugin is using a fi
 3. Go to Site Navigation menu settings. Add a new navigation menu item and choose the Site Statistics item type. Add the new menu item to the Site navigation menu.
 4. Access the Site Statistics page in the path `index/statistics`.
 
+![Näyttökuva 2024-08-04 kello 20 17 50](https://github.com/user-attachments/assets/60ce2be3-c908-4a92-b8c4-ba6316afa2df)
+
 ***
 Plugin created by The Federation of Finnish Learned Societies (https://tsv.fi/en/).
 ***
