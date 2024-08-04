@@ -1,0 +1,56 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-30T00:00:00-00:00\n"
+"PO-Revision-Date: 2024-07-30 00:00+0000\n"
+"Last-Translator: ajnyga <ajnyga@gmail.com>\n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: \n"
+
+msgid "plugins.generic.siteStatistics.name"
+msgstr "Site Statistics Plugin"
+
+msgid "plugins.generic.siteStatistics.description"
+msgstr "This plugin creates a public site wide statistics page."
+
+msgid "plugins.generic.siteStatistics.enabled"
+msgstr "The Site Statistics Plugin has been enabled."
+
+msgid "plugins.generic.siteStatistics.disabled"
+msgstr "The Site Statistics Plugin has been disabled."
+
+msgid "plugins.generic.siteStatistics.navMenuItem"
+msgstr "Site Statistics"
+
+msgid "plugins.generic.siteStatistics.navMenuItem.description"
+msgstr "Link to the site wide statistics page."
+
+msgid "plugins.generic.siteStatistics.pageTitle"
+msgstr "{$siteName} Statistics"
+
+msgid "plugins.generic.siteStatistics.keyNumbers"
+msgstr "Key Metrics"
+
+msgid "plugins.generic.siteStatistics.journalCount"
+msgstr "Journals"
+
+msgid "plugins.generic.siteStatistics.issueCount"
+msgstr "Published Issues"
+
+msgid "plugins.generic.siteStatistics.submissionCount"
+msgstr "Published Articles"
+
+msgid "plugins.generic.siteStatistics.allTimeDownloads"
+msgstr "Article Downloads"
+
+msgid "plugins.generic.siteStatistics.allTimeMostReadSubmissions"
+msgstr "All Time Most Read Articles"
+
+msgid "plugins.generic.siteStatistics.lastMonthMostReadSubmissions"
+msgstr "Trending Articles Last 30 Days"
